@@ -1,3 +1,9 @@
+
+# Modifications:
+
+This is standard golang oauth2 library with one modification: http dump added. 
+Meant to be used for debug purposes.
+
 # OAuth2 for Go
 
 [![Build Status](https://travis-ci.org/golang/oauth2.svg?branch=master)](https://travis-ci.org/golang/oauth2)
