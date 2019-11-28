@@ -7,23 +7,23 @@ Meant to be used for debug purposes.
 # OAuth2 for Go
 
 [![Build Status](https://travis-ci.org/golang/oauth2.svg?branch=master)](https://travis-ci.org/golang/oauth2)
-[![GoDoc](https://godoc.org/golang.org/x/oauth2?status.svg)](https://godoc.org/golang.org/x/oauth2)
+[![GoDoc](https://godoc.org/github.com/sgumirov/oauth2?status.svg)](https://godoc.org/github.com/sgumirov/oauth2)
 
 oauth2 package contains a client implementation for OAuth 2.0 spec.
 
 ## Installation
 
 ~~~~
-go get golang.org/x/oauth2
+go get github.com/sgumirov/oauth2
 ~~~~
 
 Or you can manually git clone the repository to
-`$(go env GOPATH)/src/golang.org/x/oauth2`.
+`$(go env GOPATH)/src/github.com/sgumirov/oauth2`.
 
 See godoc for further documentation and examples.
 
-* [godoc.org/golang.org/x/oauth2](http://godoc.org/golang.org/x/oauth2)
-* [godoc.org/golang.org/x/oauth2/google](http://godoc.org/golang.org/x/oauth2/google)
+* [godoc.org/github.com/sgumirov/oauth2](http://godoc.org/github.com/sgumirov/oauth2)
+* [godoc.org/github.com/sgumirov/oauth2/google](http://godoc.org/github.com/sgumirov/oauth2/google)
 
 ## Policy for new packages
 
