@@ -6,6 +6,7 @@ package oauth2
 
 import (
 	"errors"
+	"fmt"
 	"io"
 	"net/http"
 	"sync"
@@ -53,6 +54,13 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 	req2 := cloneRequest(req) // per RoundTripper contract
 	token.SetAuthHeader(req2)
 	t.setModReq(req, req2)
+
+	dump, err := httputil.DumpRequestOut(req2, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf(">> %q", dump)
+
 	res, err := t.base().RoundTrip(req2)
 
 	// req.Body is assumed to have been closed by the base RoundTripper.
@@ -66,6 +74,13 @@ func (t *Transport) RoundTrip(req *http.Request) (*http.Response, error) {
 		rc: res.Body,
 		fn: func() { t.setModReq(req, nil) },
 	}
+
+	dump, err = httputil.DumpResponse(res, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("<< %q", dump)
+
 	return res, nil
 }
 
